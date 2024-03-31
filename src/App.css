@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Main-Page{
+    background-color: rgb(209, 209, 209);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 100;
+    width: 60vw;
+    gap: 25px;
+}
+
+.Loading-Logo{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Loading-Logo div{
+    width: 10px;
+    background-color: rgb(46, 45, 45)
+}
+
+.Loading-Logo div:nth-child(1){
+    animation: loading1 2s linear infinite;
+}
+
+@keyframes loading1 {
+    0%{
+        height: 0px;
+    }
+    50%{
+        height: 50px;
+    }
+    100%{
+        height: 0px;
+    }
+}
+
+.Loading-Logo :nth-child(2){
+    animation: loading2 2s linear infinite;
+}
+
+@keyframes loading2 {
+    0%{
+        height: 33.3px;
+    }
+    16.6%{
+        height: 50px;
+    }
+    66.6%{
+        height:0px;
+    }
+    100%{
+        height: 33.3px;
+    }
+}
+
+.Loading-Logo :last-child{
+    animation: loading3 2s linear infinite;
+}
+
+@keyframes loading3 {
+    0%{
+        height: 16.6px;
+    }
+    33.3%{
+        height: 50px;
+    }
+    83.3%{
+        height: 0px;
+    }
+    100%{
+        height: 16.6px;
+    }
+}
+
+.Input-box{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    margin-top: 25px;
+}
+
+.Input-box span{
+    padding: 0px 5px;
+}
+
+.Input-box input{
+    outline: none;
+    border: none;
+    padding: 10px 3px;
+    width: 100%;
+}
+
+.Input-box button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    padding: 10px 10px;
+}
+
+.Today-Weather,.Current-Weather,.Looking-A-Head,.Hourly-Weather,.Daily-Weather{
+    background-color: rgb(255, 255, 255);
+    width: 60vw;
+    margin-top: 20px;
+}
+
+.Today-Weather header,.Current-Weather header,.Looking-A-Head header,.Hourly-Weather header,.Daily-Weather header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    font-size: 0.8em;
+}
+
+.Today-Weather-tag{
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.Today-Weather-Data{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 0px;
+    font-weight: 300;
+}
+
+.Today-Weather-Data img{
+    opacity: 0.8;
+}
+
+.Today-Weather-Data :last-child{
+    padding-left: 25px;
+    font-weight: 500;
+}
+
+.Current-Detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.Current-Detail div{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.Current-Detail div p{
+    padding-bottom: 15px;
+}
+
+.Current-Detail img{
+    height: 100px;
+}
+
+.Text{
+    padding: 15px 10px;
+}
+
+.Hourly-Weather-Container{
+    display: flex;
+    overflow-x: auto;
+}
+
+.Hourly-Weather-Container::-webkit-scrollbar{
+    display: none;
+}
+
+.Conatiner{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    background-color: rgb(214, 214, 214);
+    padding: 10px;
+    margin: 5px 0px 5px 5px;
+    border-radius: 5px;
+}
+
+.Conatiner:last-child{
+    margin-right: 5px;
+}
+
+.Last-Hour{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Daily-Container{
+    background-color:rgb(214, 214, 214); 
+    margin: 5px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.Time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 5px;
+}
+
+.Time :last-child{
+    padding: 3px 0px;
+    font-size: 0.7em;
+}
+
+.First{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    padding: 0px 5px;
+    gap: 3px;
+}
+
+.First :last-child{
+    font-size: 0.75em;
+    opacity: 0.8;
+}
+
+.Detailed{
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Detailed div{
+    display: flex;
+    align-items: center;
+}
+
+.Daily-Weather{
+    margin-bottom: 50px;
+}
+
+.Current-Text{
+    font-size: 3.4em;
+}
+
+@media (max-width:600px) {
+    .Current-Text{
+        font-size: 2.8em;
+    }
+    .Current-Detail{
+        gap: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Daily-Container{
+        flex-direction: column;
+    }
+    .Detailed{
+        flex-direction: row;
+        gap: 0px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width:530px) {
+    .Current-Text{
+        font-size: 2em;
+    }
+}
+
+
+@media (max-width:450px) {
+    .Current-Weather img{
+        height: 80px;
+    }
+    .Current-Text{
+        font-size: 1.5em;
+    }
+    .Detailed{
+        flex-direction: column;
+    }
+    .Detailed div{
+        width: 100%;
+    }
+    .Today-Weather-Data p{
+        padding: 0px 0px 0px 5px;
+    }
+    .Input-box,.Today-Weather,.Current-Weather,.Looking-A-Head,.Hourly-Weather,.Daily-Weather,.Loading{
+        width: 80vw;
+    }
+}
+
+@media (max-width:335px) {
+    .Today-Weather-Data p{
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+.Error{
+    width: 100vw;
+    flex-grow: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    font-size: 1.1em;
+}
+
+.Error img{
+    height: 180px;
+    position: relative;
+    animation: error 3.2s infinite linear;
+}
+
+@keyframes error {
+    0%{
+        top:0px;
+        transform: rotate(0deg);
+    }
+    25%{
+        top: -50px;
+        transform: rotate(30deg);
+    }
+    50%{
+        top: 0px;
+    }
+    75%{
+        top: 50px;
+        transform: rotate(-30deg);
+    }
+    100%{
+        top:-0px;
+        transform: rotate(0deg);
+    }
+}
