@@ -82,6 +82,7 @@ export const App = () => {
 
   const HandleSubmit = async (e) => {
     e.preventDefault();
+    SetErr(false);
     SetSearch(true);
     if (locationName !== "") {
       await getLocationKey();
